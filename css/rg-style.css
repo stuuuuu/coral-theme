@@ -1,0 +1,304 @@
+
+
+/* custom CSS for main content on responsible gambling */
+/* some styles are reused form this stylesheet */
+
+/* scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+#main-content {
+    position: relative;
+    width: 100%;
+}
+
+.rg-wrapper *{
+    transition: all 150ms;
+}
+
+.rg-main-title h2 {
+    background: #072A4B;
+    border-bottom: 1px solid #072A4B;
+}
+
+.rg-main-title h2 {
+    color: #fff;
+    font: normal 16px/1.6em Lato,Helvetica,sans-serif;
+    padding: .5em 2.7em .5em 1em;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: initial;
+    text-transform: uppercase;
+}
+
+.rg-main-title h2 {
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+}
+
+[class^="theme-"]:before, [class*=" theme-"]:before {
+    font-family: "themeicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+ .rg-wrapper {
+    background: #fff;
+    min-height: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+   
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.rg-sub-navigation{
+    float: left;
+    position: relative;
+}
+
+.rg-navigation ul {
+    margin: 0 16px;
+    padding: 0;
+    position: relative;
+}
+
+.rg-navigation ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.rg-navigation ul li a:hover {
+    background-color: #084d8d !important;
+    color: #ffffff!important;
+}
+
+.rg-navigation ul li a:hover .theme-right:before {
+    color: #ffffff!important;
+}
+
+
+.rg-sub-navigation .help-links li a {
+    padding: 1em 3em 1em 0;
+    background: #fff;
+    border-bottom: 1px solid #cacbd3;
+    color: #444;
+    font: 0.75rem Lato,Helvetica,sans-serif;
+    padding: 1em 3em 1em 1em;
+    text-decoration: none;
+}
+
+.rg-sub-navigation .help-links a {
+    text-transform: uppercase;
+}
+
+.rg-navigation ul li a {
+    display: block;
+    position: relative;
+}
+
+.rg-sub-navigation .help-links li a .theme-right {
+    font-size: 8px!important;
+    height: 8px;
+    margin: auto;
+    padding: 0!important;
+    font: 1em/1.5em themeicons;
+    margin-right: 13px;
+}
+
+
+.rg-navigation ul li a span {
+    bottom: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.rg-sub-navigation .help-links li a .theme-right:before {
+    color: #cacbd3;
+}
+
+.rg-sub-navigation .help-links .selected a {
+    background: #fff;
+    border-bottom: 1px solid #cacbd3;
+    color: #78be20;
+}
+
+/* section */
+
+.rg-wrapper .rg-content {
+    color: #444;
+    border-left: 1px solid #cacbd3;
+}
+
+.rg-content {
+    float: left;
+    padding: 1em;
+    overflow-y: scroll;
+    max-height: 100vh;
+    display: none;
+}
+
+
+.rg-content img{
+    max-width: 100%;
+}
+
+
+.rg-wrapper .rg-content article {
+    padding: 0 0 0 .5em;
+}
+
+.rg-wrapper .rg-content h1 {
+    color: #78be20;
+    font: 500 1.8em/1.2em Lato,Helvetica,sans-serif;
+    margin: 0 0 .5em 0;
+    text-align: initial;
+    text-decoration: initial;
+    text-transform: initial;
+}
+
+.rg-wrapper .rg-content p {
+    margin: 0 0 .7em 0;
+}
+
+.rg-wrapper .rg-content img {
+    vertical-align: middle;
+}
+.rg-wrapper .rg-content img {
+    margin: .7em 0;
+}
+
+@media only screen and (min-width: 769px){
+    .rg-wrapper{
+        height: 100%;
+        min-height: 100%;
+    }
+
+    .active-content .rg-sub-navigation {
+        margin-left: 0;
+    }
+    .rg-sub-navigation {
+        width: 43%;
+        min-height: 100%;
+      
+    }
+
+    .rg-navigation, .rg-wrapper, .content {
+        -webkit-transition: none;
+        -moz-transition: none;
+        -ms-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+
+    /* section */
+
+    .active-content .rg-content {
+        margin-left: -1px;
+        margin-right: 0;
+    }
+    
+    .rg-content {
+        width: 57%;
+    }
+   
+
+    .rg-content-hidden{
+        display: none!important;
+    }
+    .rg-content.rg-active-content {
+        display: block;
+    }
+
+    .rg-content {
+        min-height: 100%;
+    }
+}
+
+@media (orientation: landscape) {
+  
+  }
+
+@media only screen and (max-width: 768px){
+    .rg-sub-navigation,.rg-content{
+        width: 100%;
+    }
+    .rg-main-title{
+        display:flex;
+    }
+
+    .rg-menu-left {
+        background: #222741;
+        text-align: center;
+        width: 40px;
+    }
+
+    .rg-menu-left .rg-theme-left {
+        color: #acacac;
+        padding: 0 .5em;
+        font: 8px/8px themeicons;
+        top: 18px;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    }
+
+    .rg-theme-left:before {
+        content: "\EAB0";
+    }
+    .rg-main-title h2{
+        width: 100%;
+    }
+    .rg-content{
+        position: absolute;
+        left: 100%;
+        padding-bottom: 100px;
+    }
+
+
+}
+
+@media only screen and (max-width: 883px){
+
+    .header-navigation{
+        display:none !important;
+    }
+    .vip-wrapper {
+        padding: 0!important;
+        margin: 0 !important;
+    }
+}
